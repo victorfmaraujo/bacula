@@ -6,7 +6,7 @@ baculadir="/etc/bacula"
 baculaconf="bacula-dir.conf"
 
 #Cria arquivos de configuração
-titles=(Director Console Autochanger Catalog Client Fileset Job JobDefs Messages Pool Profile Schedule Storage)
+titles=(Director Console Autochanger Catalog Client Fileset Job JobDefs Messages Pool Profile Schedule Storage Counter)
 cd $baculadir
 cp ./bacula-dir.conf ./bacula-dir.conf.bak
 
@@ -18,6 +18,7 @@ rm ./$baculaconf.new
 #Quebrando arquivo de configuração
 for i in ${titles[@]} ; do
         mkdir -p confs/$i
+		touch confs/$i/$i.conf
         sed -n '/^'$i' {/,/^}/p' $baculaconf > confs/$i/$i.conf
 done
 
