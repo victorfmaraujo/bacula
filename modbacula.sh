@@ -12,8 +12,8 @@ cp ./bacula-dir.conf ./bacula-dir.conf.bak
 
 #Limpar comentários e linhas em branco
 cat ./$baculaconf | cut -d '#' -f1 | sed '/^$/d' > ./$baculaconf.new
-cat ./$baculaconf.new > $baculaconf
-rm ./$baculaconf.new
+cat ./$baculaconf.temp > $baculaconf
+rm ./$baculaconf.temp
 
 #Quebrando arquivo de configuração
 for i in ${titles[@]} ; do
