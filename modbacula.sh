@@ -11,7 +11,7 @@ cd $baculadir
 cp ./bacula-dir.conf ./bacula-dir.conf.bak
 
 #Limpar comentários e linhas em branco
-cat ./$baculaconf | cut -d '#' -f1 | sed '/^$/d' > ./$baculaconf.new
+cat ./$baculaconf | cut -d '#' -f1 | sed '/^$/d' > ./$baculaconf.temp
 cat ./$baculaconf.temp > $baculaconf
 rm ./$baculaconf.temp
 
