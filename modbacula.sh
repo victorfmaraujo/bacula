@@ -19,7 +19,7 @@ rm ./$baculaconf.temp
 for i in ${titles[@]} ; do
         mkdir -p confs/$i
 		touch confs/$i/$i.conf
-        sed -n '/^'$i' {/,/^}/p' $baculaconf > confs/$i/$i.conf
+        sed -n '/^'$i' {/,/^}/p' $baculaconf >> confs/$i/$i.conf
 done
 
 #Limpando arquivo de configuração
