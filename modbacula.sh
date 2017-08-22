@@ -6,7 +6,7 @@ baculadir="/etc/bacula"
 baculaconf="bacula-dir.conf"
 
 #Cria arquivos de configuração
-titles=(Director Console Autochanger Catalog Client Fileset Job JobDefs Messages Pool Profile Schedule Storage Counter)
+titles=(Director Console Autochanger Catalog Client FileSet Job JobDefs Messages Pool Profile Schedule Storage Counter)
 cd $baculadir
 cp ./bacula-dir.conf ./bacula-dir.conf.bak
 
