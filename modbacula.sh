@@ -27,6 +27,6 @@ echo '' > $baculadir/$baculaconf
 
 #Adicionando Parâmetros
 for i in ${titles[@]} ; do
-	echo '@|"sh -c "'cat $baculadir/confs/$i/*.conf'""' >> $baculaconf
+	echo '@|"sh -c '"'cat $baculadir/confs/$i/*.conf'"'"' >> $baculaconf
 done
 exit 0
